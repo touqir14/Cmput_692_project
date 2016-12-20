@@ -21,6 +21,6 @@ with open('../Nikon_Entities_Remaining.csv', 'rb') as csvfile:
         reader = csv.reader(csvfile, dialect=csv.excel_tab)
         for row in reader:
             dict[row[0]] = google_search(row[0], my_api_key, my_cse_id, num=10)
-            with open('Nikon2_snippets_Integrated.json', 'wb') as f:
+            with open('Nikon_snippets.json', 'wb') as f:
                 json.dump(dict, f, indent=2)
 
