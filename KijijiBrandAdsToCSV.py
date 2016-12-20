@@ -14,7 +14,8 @@ with open('/Users/sasa/Dropbox/1-Uni/CMPUT 692/Project/Code/dictionary.pickle', 
     with open('/Users/sasa/Dropbox/1-Uni/CMPUT 692/Project/Code/invertedindex.pickle', 'rb') as f:
         d = (pickle.load(f))
         Container={}
-        Container= (d['movie'])
+        Brand='nikon'
+        Container= (d[Brand])
         excelsheet=[]
         with open('/Users/sasa/Dropbox/1-Uni/CMPUT 692/Project/Code/movie_Ads.csv', 'w') as csvfile2:
             writer = csv.writer(csvfile2)
